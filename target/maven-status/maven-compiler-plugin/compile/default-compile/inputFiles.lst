@@ -1,0 +1,4 @@
+/Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_ingestion/src/main/java/ca/acme/ingestion/gcp/GoogleCloudInstance.java
+/Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_ingestion/src/main/java/ca/acme/ingestion/gcp/storage/GCPStorageFacade.java
+/Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_ingestion/src/main/java/ca/acme/ingestion/Driver.java
+/Users/saha/Documents/Canada/LoyaltyOne/acme_store_sales_data_ingestion/src/main/java/ca/acme/ingestion/api/IStorageFacade.java

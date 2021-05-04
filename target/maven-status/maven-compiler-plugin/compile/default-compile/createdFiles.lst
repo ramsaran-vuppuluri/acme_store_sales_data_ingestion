@@ -1,0 +1,5 @@
+ca/acme/ingestion/gcp/GoogleCloudInstance.class
+ca/acme/ingestion/api/IStorageFacade.class
+ca/acme/ingestion/Driver.class
+ca/acme/ingestion/gcp/storage/GCPStorageFacade.class
+ca/acme/ingestion/Driver$DriverCommandLineUtilityOptions.class
