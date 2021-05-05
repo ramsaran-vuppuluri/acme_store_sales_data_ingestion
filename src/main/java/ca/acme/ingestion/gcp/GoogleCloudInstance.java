@@ -25,12 +25,25 @@ public class GoogleCloudInstance {
         return credentials;
     }
 
+    /**
+     * This is the constructor of GoogleCloudInstance class.
+     *
+     * @param jsonKeyFilePathIn JSON key file path.
+     * @param projectIdIn       GCP project ID.
+     * @throws IOException Will be thrown if there is an IOException in reading the JSON key file.
+     */
     public GoogleCloudInstance(String jsonKeyFilePathIn, String projectIdIn) throws IOException {
         this.jsonKeyFilePath = jsonKeyFilePathIn;
         this.projectId = projectIdIn;
         this.credentials = this.instantiateGoogleCredentials();
     }
 
+    /**
+     * This method will create instance of GoogleCredentials.
+     *
+     * @return Instance of GoogleCredentials.
+     * @throws IOException Will be thrown if there is an IOException in reading the JSON key file.
+     */
     private GoogleCredentials instantiateGoogleCredentials() throws IOException {
         try {
             return GoogleCredentials.fromStream(new FileInputStream(this.jsonKeyFilePath))

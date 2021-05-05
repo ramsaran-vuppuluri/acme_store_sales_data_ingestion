@@ -9,6 +9,8 @@ import java.io.IOException;
 
 public interface IStorageFacade {
     /**
+     * This method is the abstract signature of the method to upload files from local file system to cloud.
+     *
      * @param bucketName           Cloud Storage bucket name.
      * @param localDirectoryPath   Local directory from which files should be copied.
      * @param fileExtensionPattern File name extension pattern.

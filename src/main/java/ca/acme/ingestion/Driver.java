@@ -1,5 +1,14 @@
 package ca.acme.ingestion;
 
+/**
+ * @author Ram Saran Vuppuluri.
+ * <p>
+ * This the entry point for the acme_store_sales_data_ingestion project. The executable jar will accepts the parameters
+ * to copy data from local file system to GCS.
+ * <p>
+ * The code has IStorageFacade, that need to be implemented for any subsequent cloud vendors or operation.
+ */
+
 import ca.acme.ingestion.gcp.storage.GCPStorageFacade;
 import com.google.devtools.common.options.Option;
 import com.google.devtools.common.options.OptionsBase;
@@ -8,6 +17,12 @@ import com.google.devtools.common.options.OptionsParser;
 import java.io.IOException;
 
 public class Driver {
+    /**
+     * This is the entry point for the acme_store_sales_data_ingestion project.
+     *
+     * @param args Arguments that are parsed by DriverCommandLineUtilityOptions
+     * @throws IOException Will be thrown if IOException is encountered.
+     */
     public static void main(String... args) throws IOException {
         OptionsParser optionsParser = OptionsParser.newOptionsParser(DriverCommandLineUtilityOptions.class);
         optionsParser.parseAndExitUponError(args);
@@ -21,7 +36,9 @@ public class Driver {
     }
 
     /**
-     * java -jar acme_store_sales_data_ingestion-1.0-SNAPSHOT.jar -j /Users/saha/Downloads/key.json -p "playground-s-11-335dc781" -b "playground-s-11-335dc781"
+     * This is an implementation of OptionsBase, to parse the command line arguments.
+     * <p>
+     * Sample command - java -jar acme_store_sales_data_ingestion-1.0-SNAPSHOT.jar -j /Users/saha/Downloads/key.json -p "playground-s-11-335dc781" -b "playground-s-11-335dc781"
      */
     public static class DriverCommandLineUtilityOptions extends OptionsBase {
         @Option(name = "jsonKeyFilePath",
